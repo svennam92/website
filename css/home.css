@@ -1,0 +1,219 @@
+@font-face {
+	font-family: 'rockwell';
+	src: url('../resources/rockwell.ttf');
+}
+
+@media screen and (max-width: 1024px) {
+	img {
+		display: none !important;
+	}
+	header {
+		color: white !important;
+		padding-top: 0px !important;
+		background-image: url('../img/background5.png') !important;
+		z-index: 20 !important;
+		font-size: 24px !important;
+		line-height: 48px !important;
+		height: 48px !important;
+		text-align: left !important;
+		padding-left: 20px !important;
+	}
+	.spacer {
+		display:none !important;
+	}
+	.filler {
+		height: 48px !important;
+	}
+	.content {
+		margin-left: 0 !important;
+	}
+}
+
+@media screen and (max-width: 400px) {
+	.mobile {
+		display: none !important;
+	}
+}
+
+.sai {
+	color: #fff;
+	text-shadow: 1px 1px 0px #000;
+}
+
+.black-back {
+	background-color: black;
+}
+
+body {
+	font-family: 'Georgia';
+}
+
+#name {
+	-webkit-transition: all 0.7s ease;
+	transition: all 0.7s ease;
+}
+
+.face {
+	padding-top: 100px;
+	background-color: #000
+}
+
+.black-back {
+	background-color: black;
+}
+
+.img-circular {
+	width: 200px;
+	height: 200px;
+	background-image: url('../img/face.png');
+	background-size: cover;
+	border-radius: 100px;
+	-webkit-border-radius: 100px;
+	-moz-border-radius: 100px;
+	-webkit-transition: all 0.7s ease;
+	transition: all 0.7s ease;
+}
+
+h1,
+h2,
+h4 {
+	font-family: rockwell;
+}
+
+.experiences h5 {
+	padding-bottom: 0px;
+	margin-bottom: 0px;
+}
+
+.stroke {
+	-webkit-text-stroke-width: 1px;
+	-webkit-text-stroke-color: black;
+}
+
+.experience {
+	padding-left: 5px;
+}
+
+.jumbo-text {
+	color: #C9C9C9 !important;
+}
+
+.jumbotron {
+	margin-bottom: 0px;
+}
+
+.unc {
+	align: center;
+	margin-bottom: 40px;
+}
+
+.filler {
+	height: 220px;
+	-webkit-transition: all 0.7s ease;
+	transition: all 0.7s ease;
+}
+
+.apps {
+	padding-bottom: 20px
+}
+
+.col-md-1,
+.col-md-2,
+.col-md-3,
+.col-md-4,
+.col-md-5,
+.col-md-6 {
+	float: none;
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: -4px;
+}
+
+.apps {
+	background-color: #F2F2F2 !important;
+}
+
+.buttons {
+	float: right;
+	text-align: right;
+	margin-right: 7px;
+	margin-top: 7px;
+}
+
+.content {
+	margin-left: -10%;
+}
+
+.intro {
+	text-align: center;
+	background-color: #f2f2f2;
+	font-size: 20px;
+}
+
+header {
+	font-family: 'rockwell';
+	padding-top: 10px;
+	padding-left: 32%;
+	z-index: 20;
+	position: fixed;
+	width: 100%;
+	text-align: left;
+	font-size: 52px;
+	line-height: 108px;
+	height: 220px;
+	background-image: url('../img/background5.png');
+	color: #fff;
+	-webkit-transition: all 0.7s ease;
+	transition: all 0.7s ease;
+}
+
+#facepic {
+	transition: all 0.7s ease;
+}
+
+#tohide {
+	height: 5px
+}
+
+header.sticky {
+	color: white;
+	padding-top: 0px;
+	background-image: url('../img/background5.png');
+	z-index: 20;
+	font-size: 24px;
+	line-height: 48px;
+	height: 48px;
+	text-align: left;
+	padding-left: 20px;
+}
+
+.ext {
+	margin: 0px;
+}
+
+html {
+	position: relative;
+	min-height: 100%;
+}
+
+body {
+	/* Margin bottom by footer height */
+	margin-bottom: 60px;
+}
+
+.footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	/* Set the fixed height of the footer here */
+	height: 60px;
+	background-color: #000;
+	padding-top: 5px;
+}
+
+.footer-text {
+	color: #C9C9C9;
+	text-align: left;
+	margin: 0;
+	font-family: rockwell;
+}
