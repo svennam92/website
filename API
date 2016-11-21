@@ -1,0 +1,115 @@
+Three endpoints: /, /room, and /player
+===============================================
+~~~ITEM (/)~~~
+
+#GET (public endpoint) (get info for a certain item)
+itemId/get
+response:
+{
+	itemId: int
+	itemLabel: str
+	itemDesc:
+	{
+		isTakeable: bool
+		clearStateOnDrop: bool
+		state: str
+		isUsable: bool
+	}
+	prepositions:
+	[
+		with:
+		[
+			itemId: {
+				reqState: str # kneeling
+				reqPlayerInventory [itemId1, ...] # oven mitt
+				reqRoomInventory [itemId2, ...] # oven
+			}
+		]
+		on: ...
+		under: ...
+		null: ... (for using by itself)
+	]
+}
+
+#GET (restricted endpoint) (get all registered items)
+/getAll
+response:
+{{...}, {...}, {...}, ..} # all registered items
+
+#POST (restricted) (add a new item)
+/addItem {itemId, itemLabel, itemDesc{}, verbs[]}
+response:
+{success|failure}
+
+#POST (public) (for some item, add a new verb and necessary states to be usable)
+itemId/addVerb request:
+{
+	verb,
+	itemId,
+	{reqState, reqPlayerInventory[], reqRoomInventory[]}
+}
+response:
+{success|failure}
+
+#POST (restricted) (update an item's state)
+itemId/updateItem {isTakeable, clearStateOnDrop, state, isUsable}
+response:
+{success|failure}
+
+## This is the big one! This is how we ensure if an item is usable with another.
+## Behind the scenes, it will check all the necessary requirements for usage.
+#POST (public) (check if item+verb+item is compatible with current player/room states)
+itemId/use {roomId, playerId, [verb, itemUsedId]}
+response:
+{true|false}
+
+#POST (public) (checks if an item is usable by itself)
+itemId/use {roomId, playerId, [null, null]}
+response:
+{true|false}
+===============================================
+~~~ROOM (/room)~~~
+#GET (public) (get room info)
+room/get {roomId}
+response:
+{
+	roomId: int
+	roomInventory: [itemId1, itemId2, itemId3]
+	playersInRoom: []
+}
+
+#POST (restricted) (enter room)
+room/roomId/enter {player_id}
+response:
+{success|failure}
+
+#POST (restricted) (create a new room)
+room/create {roomId, roomInventory[]}
+response:
+{success|failure}
+
+#POST (restricted) (update room)
+room/roomId/update {roomInventory[]}
+response:
+{success|failure}
+
+===============================================
+~~~PLAYER (/player)~~~
+#GET (public) (get info about a certain player)
+player/get {playerId}
+response:
+{
+	playerId
+	playerInventory [itemId1, itemId2, itemId3]
+	playerState
+}
+
+#POST (restricted) (create a new player)
+player/create {playerId, playerInventory[], playerState}
+response:
+{success|failure}
+
+#POST (restricted) (update player state)
+player/playerId/updateState {playerState}
+response:
+{success|failure}

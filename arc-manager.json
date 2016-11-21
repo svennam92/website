@@ -5,7 +5,7 @@
   },
   "models": {
     "ManagerHost": {
-      "3e04d347-2e47-4555-91c0-bf12d5fbe84e": "{\"id\":\"3e04d347-2e47-4555-91c0-bf12d5fbe84e\",\"host\":\"loopback-sai-pm.stage1.mybluemix.net\",\"port\":80,\"actions\":[\"delete\",\"edit\",\"env-set\",\"env-get\",\"stop\",\"restart\",\"cluster-restart\",\"license-push\"],\"protocol\":\"http\",\"created\":1444067042422,\"error\":null,\"errorType\":null,\"app\":{\"name\":\"loopback-example-app\",\"version\":null,\"port\":3001},\"processes\":{\"pids\":[{\"parentPid\":72,\"pid\":77,\"workerId\":1,\"listeningSockets\":[{\"addressType\":4,\"address\":\"0.0.0.0\",\"port\":3001}],\"isTrackingObjects\":false,\"isProfiling\":false,\"isTracing\":false,\"watchdogTimeout\":0,\"watchdogStallout\":0,\"isSnapshotting\":false,\"startTime\":\"2015-10-05T17:45:58.251Z\",\"stopTime\":null,\"stopReason\":\"\",\"id\":3,\"serviceInstanceId\":1},{\"parentPid\":42,\"pid\":72,\"workerId\":0,\"listeningSockets\":[],\"isTrackingObjects\":false,\"isProfiling\":false,\"isTracing\":false,\"watchdogTimeout\":0,\"watchdogStallout\":0,\"isSnapshotting\":false,\"startTime\":\"2015-10-05T17:45:57.426Z\",\"stopTime\":null,\"stopReason\":\"\",\"id\":4,\"serviceInstanceId\":1}]}}"
+      "3e04d347-2e47-4555-91c0-bf12d5fbe84e": "{\"id\":\"3e04d347-2e47-4555-91c0-bf12d5fbe84e\",\"host\":\"loopback-sai-pm.stage1.mybluemix.net\",\"port\":80,\"actions\":[\"delete\",\"edit\"],\"protocol\":\"http\",\"created\":1444067042422,\"error\":{\"message\":\"read ECONNRESET\"},\"errorType\":\"unknown\",\"app\":null,\"processes\":null}"
     },
     "LoadBalancer": {}
   }
