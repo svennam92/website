@@ -11,7 +11,7 @@
         height: 48px !important;
     }
     .spacer,
-    img {
+    #facepic, .logo {
         display: none !important; 
     }
 	.btns {
@@ -34,6 +34,25 @@
 @media screen and (max-width: 450px) {
     .mobile {
         display: none!important
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    h1 {
+        font-size: 21px!important
+    }
+    h3 {
+        font-size: 18px!important
+    }
+    .unc {
+        margin-bottom: 0px!important
+    }
+
+}
+
+@media screen and (min-width: 1024px) {
+    #mini {
+        display: none !important
     }
 }
 .sai {
